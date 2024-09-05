@@ -38,5 +38,5 @@ async def read_item(request: Request):
     shuffle(items)
 
     return templates.TemplateResponse(
-        request=request, name="index.html", context = { "items": items[:3] }
+        request=request, name="index.html", context = { "items": items[:4] }
     )
