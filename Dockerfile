@@ -1,13 +1,15 @@
 # Шаг 1: Используем базовый образ с установленным Python
-FROM python:3.12-alpine
+FROM python:3.11-slim
 
-RUN apk update && apk add
+RUN apt update && apk add git
 
 # Клонируем репозиторий с GitHub
 RUN git clone https://github.com/maxempolk/fastapi-app.git /app
 
 # Шаг 2: Устанавливаем рабочую директорию
 WORKDIR /app
+
+# aboba)
 
 # Шаг 3: Копируем файл зависимостей и устанавливаем их
 COPY requirements.txt .
