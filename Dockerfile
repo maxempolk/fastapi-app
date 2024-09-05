@@ -1,7 +1,7 @@
 # Шаг 1: Используем базовый образ с установленным Python
 FROM python:3.12-alpine
 
-RUN apt-get update && apt-get install -y git
+RUN apt update && apt install git
 
 # Клонируем репозиторий с GitHub
 RUN git clone https://github.com/maxempolk/fastapi-app.git /app
