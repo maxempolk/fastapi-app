@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: fastapi-app
+    build:
+      context: .
+    ports:
+      - "80:80"
+    container_name: fast-api-container
